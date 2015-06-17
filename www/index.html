@@ -29,7 +29,18 @@
         <h1 class="title">Ionic Blank Starter</h1>
       </ion-header-bar>
       <ion-content ng-controller="ctrl">
-      <button class="button button-full button-light" ng-click="play('/android_asset/www/a.mp3')">Play</button>
+    </br></br></br>
+
+   <!--   <img src="img/Play_button.png" ng-click="play()" width="50" height="50">
+      <img src="img/Stop_button.png" ng-click="stop()" width="50" height="50"> -->
+      <button class="button ion-play" ng-click="play()"></button>
+      <button class="button ion-pause" ng-click="pause()"></button>
+      <button class="button ion-stop" ng-click="stop()"></button> 
+
+      <input type="range" ng-model="adjust" on-release="seek()" ng-init="adjust=0" min=0 max=100>
+      <p>{{adjust}}</p>
+      
+      <button class="button button-full button-light" ng-click="init()">Get duration</button>
       </ion-content>
     </ion-pane>
   </body>
